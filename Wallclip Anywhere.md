@@ -12,7 +12,7 @@ lwz r12,0x0074(r28)
 cmplwi r12,12
 bne- 0x04
 lis r12,0x1fff
-lwz r12,-154(r28)
+lwz r12,-0x154(r28)
 nop
 ```
 # (Assembly)
