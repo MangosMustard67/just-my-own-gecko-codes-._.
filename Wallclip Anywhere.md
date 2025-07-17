@@ -6,6 +6,15 @@ C25699AC 00000004
 3D801FFF 819CFEAC
 60000000 00000000
 ```
+```
+stw r26,0x0074(r28)
+lwz r12,0x0074(r28)
+cmplwi r12,12
+bne- 0x04
+lis r12,0x1fff
+lwz r12,-154(r28)
+nop
+```
 # (Assembly)
 (DEFAULT INSTRUCTION)
 ```
