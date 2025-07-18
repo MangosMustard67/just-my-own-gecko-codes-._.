@@ -2,8 +2,9 @@
 ```
 C25699AC 00000003
 935C0074 399CFEAC
-3F00VVVV 6318YYYY
-930C0000 00000000
+3D604250 630BFFFF
+916C0000 00000000
+
 ```
 Recommended VVVV/YYYY values:
 VVVV/YYYY: 4F4F/BFBF , Highclip
@@ -29,7 +30,7 @@ D0230078 00000000
 ```
 ```
 lhz r12, 0x0078 (r3) (Load Y velocity into r12)
-lwz r11, 0x0240 (r3) (Load "wall is hit" flag into r11)
+lwz r11, 0x0240 (r3) (Load "which wall is currently being hit?" flag into r11)
 cmpwi r12, 0xMMMM (Check if Y velocity is greater than MMMM)
 blt 0x14 (If velocity less than MMMM, branch to default instruction. Otherwise, keep going.)
 cmpwi r11, 0xC (Check if touching wall)
