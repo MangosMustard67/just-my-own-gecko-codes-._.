@@ -1,11 +1,9 @@
 # NTSC-U
 ```
 C25699AC 00000003
-935C0074 281A000C
-40820008 399CFEAC
-1D8C0FFF 00000000
-
-
+935C0074 399CFEAC
+3F20XXXX 6339XXXX
+932C0000 00000000
 ```
 
 # (Assembly)
@@ -14,14 +12,8 @@ C25699AC 00000003
 stw r26,0x0074(r28) 
 ```
 ```
-lhz r12,0x0074(r28)
-cmplwi r12,0xc
-bne 0x4
-lis r12, 0x8004
-ori r12, r12, 0x09b8
-mtctr r12
-bctr 
-lis r26, 0x1FFF
-lfd f1, 0x0(r26)
-stfs f1, 0x0078(r3)
+subi r12,r28,0x154
+lis r25,0xXXXX
+ori r25,r25,0xXXXX
+stw r25,0(r12)
 ```
