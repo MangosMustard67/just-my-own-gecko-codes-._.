@@ -2,9 +2,8 @@
 ```
 C25699AC 00000003
 935C0074 399CFEAC
-3F004F4F 6338BFBF
+3F004F4F 6318BFBF
 930C0000 00000000
-
 ```
 
 # (Assembly)
@@ -14,7 +13,7 @@ stw r26,0x0074(r28)
 ```
 ```
 subi r12,r28,0x154
-lis r25,0xXXXX
-ori r25,r25,0xYYYY
-stw r25,0(r12)
+lis r24,0x4f4f
+ori r24,r24,0xbfbf
+stw r24,0(r12) 
 ```
