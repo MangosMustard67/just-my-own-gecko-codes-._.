@@ -19,9 +19,11 @@ ori r24,r24,0xYYYY (Set lower 2 bytes to YYYY)
 stw r24,0(r12) (Store the 4 bytes into Y velocity address
 ```
 too mught heiight is fall
+```
 lhz r11, 0x0078 (r3)
 cmpwi r11,0x4000
 ble 0xC
 lis r12, 0xFFFF
 stw r12, 0x0078 (r3)
 stfs f1, 0x0078 (r3)
+```
