@@ -2,40 +2,27 @@
 ```
 C25699AC 00000003
 935C0074 399CFEAC
-3D604250 630BFFFF
+3D60UUUU 616BLLLL
 916C0000 00000000
-
 ```
-Recommended VVVV/YYYY values:
-VVVV/YYYY: 4F4F/BFBF , Highclip
+Recommended UUUU/LLLL Values
+4250/0000: Low clip
+4285/5000: Normal clip
+4299/FFFF: Good clip
+4300/0000: High clip
+4350/0000: Higher clip
+4375/0000: INSANE clip
+I wouldn't recommend going higher than these since it may make you fly FOREVER.... but, im not in charge of you. So do what you plead :)
+Going any lower doesnt yield very interesting results btw.
+Negative values warp you to limbo lololol
 # Assembly 1 (Runs at walltouch)
-(DEFAULT INSTRUCTION) (RUNS WHEN TOUCHING KCL FLAG 0XC (WALL))
+(DEFAULT INSTRUCTION) (RUNS WHEN TOUCHING WALL)
 ```
 stw r26,0x0074(r28) 
 ```
 ```
 subi r12,r28,0x154 (GET THE Y VELOCITY ADDRESS, put into r12)
-lis r24,0xVVVV   (Set upper 2 bytes to VVVV)
-ori r24,r24,0xYYYY (Set lower 2 bytes to YYYY)
-stw r24,0(r12) (Store the 4 bytes of r24 (VVVVYYYY) into Y velocity address!!!)
-```
-too mught heiight is fall (Address is responsible for your y velocity)
-```
-C25AA364 00000005
-A1830078 81630240
-2C0C4000 41800014
-2C0B000C 4182000C
-39600002 7D8C5BD6
-D0230078 00000000
-```
-```
-lhz r12, 0x0078 (r3) (Load Y velocity into r12)
-lwz r11, 0x0240 (r3) (Load "which wall is currently being hit?" flag into r11)
-cmpwi r12, 0xMMMM (Check if Y velocity is greater than MMMM)
-blt 0x14 (If velocity less than MMMM, branch to default instruction. Otherwise, keep going.)
-cmpwi r11, 0xC (Check if touching wall)
-beq 0xC (If touching wall, then stop. Otherwise, keep going bro.)
-li r11, 0x2 (Set r11 to 0x2)
-divw r12, r12, r11 (Divide my Y velocity by 2)
-stfs f1, 0x0078 (r3) (DEFAULT INSTRUCTION)
+lis r11,0xUUUU (Set upper 2 bytes to UUUU)
+ori r11,r11,0xLLLL (Set lower 2 bytes to LLLL)
+stw r11,0(r12) (Store the 4 bytes of r24 (VVVVYYYY) into Y velocity address!!!)
 ```
