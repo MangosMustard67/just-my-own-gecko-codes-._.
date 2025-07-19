@@ -24,5 +24,5 @@ stw r26,0x0074(r28)
 subi r12,r28,0x154 (GET THE Y VELOCITY ADDRESS, put into r12)
 lis r11,0xUUUU (Set upper 2 bytes to UUUU)
 ori r11,r11,0xLLLL (Set lower 2 bytes to LLLL)
-stw r11,0(r12) (Store the 4 bytes of r24 (VVVVYYYY) into Y velocity address!!!)
+stw r11,0(r12) (Store the 4 bytes of r11 (UUUULLLL) into Y velocity address!!!)
 ```
