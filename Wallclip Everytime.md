@@ -7,11 +7,17 @@ C25699AC 00000003
 ```
 Recommended UUUU/LLLL Values
 4250/0000: Low clip
+
 4285/5000: Normal clip
+
 4299/FFFF: Good clip
+
 4300/0000: High clip
+
 4350/0000: Higher clip
+
 4375/0000: INSANE clip
+
 I wouldn't recommend going higher than these since it may make you fly FOREVER.... but, im not in charge of you. So do what you plead :)
 Going any lower doesnt yield very interesting results btw.
 Negative values warp you to limbo lololol
