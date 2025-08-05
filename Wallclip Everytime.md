@@ -54,8 +54,9 @@ B01E005E 3D808000
 60000000 00000000
 
 ```
-Write up
+Write up (C251BD060 ONLY)
 ```
+
 sth r0, 0x005e(r30) (default instruction)
 lis r12, 0x8000
 ori r12,r12, 0x3B00
