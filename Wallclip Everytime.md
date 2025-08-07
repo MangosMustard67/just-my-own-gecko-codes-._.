@@ -54,7 +54,7 @@ B01E005E 3D808000
 60000000 00000000
 
 ```
-Write up (C251BD060 ONLY)
+Write up (C251D060 ONLY)
 ```
 
 sth r0, 0x005e(r30) (default instruction)
