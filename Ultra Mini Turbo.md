@@ -298,7 +298,7 @@ cmpwi r11, 0x14A (compare r11 to max UMT value)
 bne end
 b changetheMT 
 end:
-lwz	r3, 0x0078 (r30) (Default instruction. This and the code afterward load values into r3 and r0, meaning our code uses 100% safe registers :]. No game crashes here!)
+lwz	r3, 0x0078 (r30) (Default instruction. This and the code afterward load values into r3 and r0, meaning this code uses 100% safe registers :]. No game crashes here!)
 
 C257C89C/C2582A80/C2571158/C2583100 (Give us extra boost when we release blue mini turbo with max UMT threshold)
 
