@@ -314,7 +314,7 @@ end:
 
 C257C8A8/C2582A8C/C2571164/C258310C (Give us more speed when we release our ultra mini turbo)
 
-cmpwi r11,0x14A ( R11 is still the UMT halfword because this code runs a bit after C257C89C. )
+cmpwi r11,0x14A (r11 is still the UMT halfword because this code runs a little after C257C89C. )
 bne- default (Do the default instruction if not equal)
 alter: (Give us a mushroom speed boost) 
 li r0,4 (4 is the mushroom boost value)
