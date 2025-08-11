@@ -221,7 +221,7 @@ beq ULTRA
 sth r31,0x10C(r29)
 b end
 ULTRA:
-mulli r31,r31,11
+mulli r31,r31,9
 sth r31,0x10C(r29)
 end:
 
