@@ -3,7 +3,8 @@
 Name is self explanatory. This is my best code and im so very proud of it :)
 It is almost 1:1 with the Retro Rewind ultra mini turbos, that's how polished it is.
 Credits to maritoguionyo (https://mariokartwii.com/member.php?action=profile&uid=421) for telling me how to optimize this code, helping me improve my ASM a LOT, and most importantly, telling me how to port codes. I can not thank him enough honestly.
-**TESTED ON ALL VERSIONS**
+
+# **TESTED ON ALL VERSIONS**
 # NTSC-U
 ```
 C25AA544 00000014
