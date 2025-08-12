@@ -5,7 +5,7 @@ It is almost 1:1 with the Retro Rewind ultra mini turbos, that's how polished it
 Credits to maritoguionyo (https://mariokartwii.com/member.php?action=profile&uid=421) for giving me optimization tips , helping me improve my ASM a LOT, and most importantly, telling me how to port codes. I can not thank him enough honestly!!!🙏
 
 # **!!!!TESTED ON AND WORKS IN ALL REGIONS!!!!**
-Doesnt work in battle mode, and when racing a ghost, only YOU will be able to ultra mini turbo, not the ghost
+Doesnt work in battle mode, and when racing a ghost, only YOU will be able to ultra mini turbo, not the ghost.
 # NTSC-U
 ```
 C25AA544 00000014
@@ -15,7 +15,7 @@ C25AA544 00000014
 4182007C A16C005C
 280BBF80 4182002C
 280B3F80 41820024
-48000004 39600002
+48000004 39600003
 A00C0016 7D6B0214
 2C0B014A B16C0016
 40800024 48000048
@@ -53,7 +53,7 @@ C25B4DEC 00000014
 4182007C A16C005C
 280BBF80 4182002C
 280B3F80 41820024
-48000004 39600002
+48000004 39600003
 A00C0016 7D6B0214
 2C0B014A B16C0016
 40800024 48000048
@@ -91,7 +91,7 @@ C25A34C4 00000014
 4182007C A16C005C
 280BBF80 4182002C
 280B3F80 41820024
-48000004 39600002
+48000004 39600003
 A00C0016 7D6B0214
 2C0B014A B16C0016
 40800024 48000048
@@ -129,7 +129,7 @@ C25B546C 00000014
 4182007C A16C005C
 280BBF80 4182002C
 280B3F80 41820024
-48000004 39600002
+48000004 39600003
 A00C0016 7D6B0214
 2C0B014A B16C0016
 40800024 48000048
@@ -178,10 +178,10 @@ cmplwi r11, 0xBF80
 beq changeby5
 cmplwi r11, 0x3F80
 beq changeby5
-b changeby2
+b changeby3
 
-changeby2:
-li r11, 0x2
+changeby3:
+li r11, 0x3
 lhz r0, 0x16(r12)
 add r11, r11, r0
 cmpwi r11, 0x14A
@@ -265,12 +265,12 @@ cmplwi r11, 0xBF80 (Compare it to maximum right drift intensity)
 beq changeby5 (If its equal then change our UMT halfword by 5)
 cmplwi r11, 0x3F80 (Compare it to maximum left drift intensity)
 beq changeby5 (Change UMT halfword by 5 if equal)
-b changeby2 (Otherwise just change our UMT halfword by 2.)
+b changeby3 (Otherwise just change our UMT halfword by 3.)
 
-changeby2:  (Change our UMT halfword by 2)
-li r11, 0x2 (r11 is 2)
+changeby3:  (Change our UMT halfword by 3)
+li r11, 0x3 (r11 is 3)
 lhz r0, 0x16(r12) (r0 is UMT halfword value)
-add r11, r11, r0 (add 2 to our UMT halfword value)
+add r11, r11, r0 (add 3 to our UMT halfword value)
 cmpwi r11, 0x14A (See if we reached the UMT threshold)
 sth r11, 0x16(r12) (Store our new UMT halfword value)
 bge changetheMT (Give us a blue mini turbo if greater than or equal to max threshold)
