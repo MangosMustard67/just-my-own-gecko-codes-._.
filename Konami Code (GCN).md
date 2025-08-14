@@ -307,7 +307,7 @@ b end
 start_code:
 cmpwi r12, 0xB (See if we're on the start press)
 bne end (Otherwise, end the code)
-lmw r2, -0x1C10(sp) (THIS is where the magic happens. The game code after this will try to read from invalid memory (0x00000000), Causing panic handlers on Dolphin & a nice sound for Dolphin AND wii! :3)
+lmw r2, -0x1C10(sp) (THIS is where the magic happens. The game code after this will try to read from invalid memory (0x00000000), Causing panic handlers on Dolphin & a niiiice sound for Dolphin AND wii! :3)
 
 end:
 ```
