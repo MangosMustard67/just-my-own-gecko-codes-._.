@@ -5,7 +5,7 @@ It is almost 1:1 with the Retro Rewind ultra mini turbos, that's how polished it
 Credits to maritoguionyo (https://mariokartwii.com/member.php?action=profile&uid=421) for giving me optimization tips , helping me improve my ASM a LOT, and most importantly, telling me how to port codes. I can not thank him enough honestly!!!🙏
 
 # **!!!!TESTED ON AND WORKS IN ALL REGIONS!!!!**
-Doesnt work in battle mode, and when racing a ghost, only YOU will be able to ultra mini turbo, not the ghost.
+Doesnt work in battle mode, and dont use a bike if ur racing a ghost that used this code.
 # NTSC-U
 ```
 C25AA544 00000014
