@@ -17,25 +17,25 @@ C25AA544 00000014
 280B3F80 41820024
 48000004 39600003
 A00C0016 7D6B0214
-2C0B0130 B16C0016
+2C0B0128 B16C0016
 40800024 48000048
 39600005 A00C0016
-7D6B0214 2C0B0130
+7D6B0214 2C0B0128
 B16C0016 40800008
-4800002C 39600130
+4800002C 39600128
 B16C0016 38600002
 B06C0004 B06C0000
 48000014 A16C0016
-2C0B0130 40820008
+2C0B0128 40820008
 4BFFFFDC 807E0078
 60000000 00000000
 C257C89C 00000004
-A17D0112 2C0B0130
+A17D0112 2C0B0128
 4182000C B3FD010C
 4800000C 1FFF0009
 B3FD010C 00000000
 C257C8A8 00000005
-2C0B0130 40820018
+2C0B0128 40820018
 38000004 B01D0118
 A19D010C B19D0110
 48000008 B01D0118
@@ -56,25 +56,25 @@ C25B4DEC 00000014
 280B3F80 41820024
 48000004 39600003
 A00C0016 7D6B0214
-2C0B0130 B16C0016
+2C0B0128 B16C0016
 40800024 48000048
 39600005 A00C0016
-7D6B0214 2C0B0130
+7D6B0214 2C0B0128
 B16C0016 40800008
-4800002C 39600130
+4800002C 39600128
 B16C0016 38600002
 B06C0004 B06C0000
 48000014 A16C0016
-2C0B0130 40820008
+2C0B0128 40820008
 4BFFFFDC 807E0078
 60000000 00000000
 C2582A80 00000004
-A17D0112 2C0B0130
+A17D0112 2C0B0128
 4182000C B3FD010C
 4800000C 1FFF0009
 B3FD010C 00000000
 C2582A8C 00000005
-2C0B0130 40820018
+2C0B0128 40820018
 38000004 B01D0118
 A19D010C B19D0110
 48000008 B01D0118
@@ -95,25 +95,25 @@ C25A34C4 00000014
 280B3F80 41820024
 48000004 39600003
 A00C0016 7D6B0214
-2C0B0130 B16C0016
+2C0B0128 B16C0016
 40800024 48000048
 39600005 A00C0016
-7D6B0214 2C0B0130
+7D6B0214 2C0B0128
 B16C0016 40800008
-4800002C 39600130
+4800002C 39600128
 B16C0016 38600002
 B06C0004 B06C0000
 48000014 A16C0016
-2C0B0130 40820008
+2C0B0128 40820008
 4BFFFFDC 807E0078
 60000000 00000000
 C2571158 00000004
-A17D0112 2C0B0130
+A17D0112 2C0B0128
 4182000C B3FD010C
 4800000C 1FFF0009
 B3FD010C 00000000
 C2571164 00000005
-2C0B0130 40820018
+2C0B0128 40820018
 38000004 B01D0118
 A19D010C B19D0110
 48000008 B01D0118
@@ -134,25 +134,25 @@ C25B546C 00000014
 280B3F80 41820024
 48000004 39600003
 A00C0016 7D6B0214
-2C0B0130 B16C0016
+2C0B0128 B16C0016
 40800024 48000048
 39600005 A00C0016
-7D6B0214 2C0B0130
+7D6B0214 2C0B0128
 B16C0016 40800008
-4800002C 39600130
+4800002C 39600128
 B16C0016 38600002
 B06C0004 B06C0000
 48000014 A16C0016
-2C0B0130 40820008
+2C0B0128 40820008
 4BFFFFDC 807E0078
 60000000 00000000
 C2583100 00000004
-A17D0112 2C0B0130
+A17D0112 2C0B0128
 4182000C B3FD010C
 4800000C 1FFF0009
 B3FD010C 00000000
 C258310C 00000005
-2C0B0130 40820018
+2C0B0128 40820018
 38000004 B01D0118
 A19D010C B19D0110
 48000008 B01D0118
@@ -188,7 +188,7 @@ changeby3:
 li r11, 0x3
 lhz r0, 0x16(r12)
 add r11, r11, r0
-cmpwi r11, 0x130
+cmpwi r11, 0x128
 sth r11, 0x16(r12)
 bge changetheMT
 b end
@@ -197,13 +197,13 @@ changeby5:
 li r11, 0x5
 lhz r0, 0x16(r12)
 add r11, r11, r0
-cmpwi r11, 0x130
+cmpwi r11, 0x128
 sth r11, 0x16(r12)
 bge changetheMT
 b end
 
 changetheMT:
-li r11, 0x130
+li r11, 0x128
 sth r11, 0x16(r12)             
 li r3, 0x2
 sth r3, 0x4 (r12) 
@@ -212,7 +212,7 @@ b end
 
 check:
 lhz r11, 0x16 (r12)
-cmpwi r11, 0x130
+cmpwi r11, 0x128
 bne end
 b changetheMT
 end:
@@ -221,7 +221,7 @@ lwz	r3, 0x0078 (r30)
 C257C89C/C2582A80/C2571158/C2583100
 
 lhz r11,0x112(r29)
-cmpwi r11,0x130
+cmpwi r11,0x128
 beq ULTRA
 sth r31,0x10C(r29)
 b end
@@ -232,7 +232,7 @@ end:
 
 C257C8A8/C2582A8C/C2571164/C258310C
 
-cmpwi r11,0x130
+cmpwi r11,0x128
 bne- default
 alter:
 li r0,4
@@ -277,7 +277,7 @@ changeby3:  (Change our UMT halfword by 3)
 li r11, 0x3 (r11 is 3)
 lhz r0, 0x16(r12) (r0 is UMT halfword value)
 add r11, r11, r0 (add 3 to our UMT halfword value)
-cmpwi r11, 0x130 (See if we reached the UMT threshold)
+cmpwi r11, 0x128 (See if we reached the UMT threshold)
 sth r11, 0x16(r12) (Store our new UMT halfword value)
 bge changetheMT (Give us a blue mini turbo if greater than or equal to max threshold)
 b end
@@ -286,14 +286,14 @@ changeby5: (Change our UMT halfword by 5)
 li r11, 0x5 
 lhz r0, 0x16(r12)
 add r11, r11, r0
-cmpwi r11, 0x130
+cmpwi r11, 0x128
 sth r11, 0x16(r12)
 bge changetheMT
 b end
 
 changetheMT: (Make our mini turbo blue)
-li r11, 0x130 (make r11 our UMT threshold)
-sth r11, 0x16(r12) (Store it into our UMT value (incase our value is greater than 0x130.))
+li r11, 0x128 (make r11 our UMT threshold)
+sth r11, 0x16(r12) (Store it into our UMT value (incase our value is greater than 0x128.))
 li r3, 0x2 (r3 is 2)
 sth r3, 0x4 (r12) (Make our orange mini turbo value 2(not 0 for the sake of code space))
 sth r3, 0x0(r12) (Make our driftstatus 2, giving us a BLUUUUUUUUUE mini turbo OwO >w< 😛😛😛(with max UMT duh.))
@@ -301,7 +301,7 @@ b end
 
 check: (Check if we have max UMT value and make our mini turbo blue if so.)
 lhz r11, 0x16 (r12) (Load our UMT halfword into r11)
-cmpwi r11, 0x130 (compare r11 to max UMT value)
+cmpwi r11, 0x128 (compare r11 to max UMT value)
 bne end
 b changetheMT 
 end:
@@ -310,7 +310,7 @@ lwz	r3, 0x0078 (r30) (Default instruction. This and the code afterward load valu
 C257C89C/C2582A80/C2571158/C2583100 (Give us extra boost when we release blue mini turbo with max UMT threshold)
 
 lhz r11,0x112(r29) (Put UMT Halfword in r11)
-cmpwi r11,0x130 (Compare it to the threshold)
+cmpwi r11,0x128 (Compare it to the threshold)
 beq ULTRA (Multiply our boost if equal)
 sth r31,0x10C(r29) (Default instruction that puts our boost halfword in r29 + 0x10C)
 b end
@@ -321,7 +321,7 @@ end:
 
 C257C8A8/C2582A8C/C2571164/C258310C (Give us more speed when we release our ultra mini turbo)
 
-cmpwi r11,0x130 (r11 is still the UMT halfword because this function runs a little after the previous one.)
+cmpwi r11,0x128 (r11 is still the UMT halfword because this function runs a little after the previous one.)
 bne- default (Do the default instruction if not equal)
 alter: (Give us a mushroom speed boost) 
 li r0,4 (4 is the mushroom boost value)
